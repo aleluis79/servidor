@@ -1,0 +1,14 @@
+<div class="container">
+  <form [formGroup]="datosFormGroup">
+    <div class="form-data">
+      <label for="accion">Acción:</label>
+      <input id="accion" oninput="this.value = this.value.toUpperCase()" formControlName="accion" placeholder="AGREGAR" maxlength="20">
+      <label for="valor">Valor:</label>
+      <input id="valor" formControlName="valor" placeholder="issue=1" maxlength="50">
+      <div>
+        <button (click)="enviarDatos();">Enviar mensaje</button>
+      </div>
+    </div>
+  </form>
+  <p>Form Status: {{ datosFormGroup.status }}</p>
+</div>
